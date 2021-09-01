@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degnator - Register</title>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Lobster|Trirong|Rakkas|Yatra One|Syne Mono|Charmonman|Chonburi|Pattaya|Yellowtail|Great Vibes|Damion">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="./css/register.css" />
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="register">
+            <div class="left-section">
+                <header>Register for Discord</header>
+                <div class="form-section">
+                    <legend> join the community Now and see what your friends are posting.</legend>
+                    <form action="" method="POST" id="signup-form">
+                        <div class="input-section">
+                            <label for="signup-username">Username</label>
+                            <input type="text" id="signup-username" placeholder="Enter your Username... " required />
+                            <span id="error"></span>
+                        </div>
+                        <div class="input-section ">
+                            <label for="signup-email">Email</label>
+                            <input type="email" name="username" id="email" placeholder="Enter your Email..." required />
+                            <span id="email-error"></span>
+
+                        </div>
+                        <div class="input-section ">
+                            <label for="signup-password">password</label>
+                            <input type="password" name="password" id="password" placeholder="Enter your Password..." required />
+
+                        </div>
+                        <div class="input-section ">
+                            <label for="signup-confirm-password">confirm Password</label>
+                            <input type="password" name="password" id="confirm-password" placeholder="confirm your Password..." required />
+                            <span id="error"></span>
+
+                        </div>
+                        <span>Already a member? <a href="/login.html ">Login</a></span>
+                        <div class="submit ">
+                            <button>Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="right-section ">
+                <img src="images/image-1.jpg " alt="register-image " />
+            </div>
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/auth.js "></script>
+</body>
+
+</html>

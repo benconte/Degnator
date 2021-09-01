@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degnator - home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Lobster|Trirong|Rakkas|Yatra One|Syne Mono|Charmonman|Chonburi|Pattaya|Yellowtail|Great Vibes|Damion">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <center>Degnator</center>
+    <div class="main">
+        <!-- create new channel starts here -->
+        <div class="create-channel" id="createChannelPopup">
+            <div class="box">
+                <header>
+                    <span>Create a new channel</span>
+                    <i class="fas fa-times" id="createChannelPopup_close"></i>
+                </header>
+                <form id="createNewChannel">
+                    <div class="input-section">
+                        <label for="channelName"><i class="fas fa-users"></i> Channel name</label>
+                        <input type="text" name="channelName" placeholder="Enter channel name..." id="channelName" />
+                    </div>
+                    <button type="submit">Create channel</button>
+                </form>
+            </div>
+        </div>
+        <!-- create new channel ends here -->
+        <div class="left-section">
+            <header>
+                <img src="images/default.png" alt="auguste" />
+                <span>Auguste's server</span>
+                <div class="settings">
+                    <i class="fas fa-cogs" id="dropdown-header"></i>
+                    <div class="header-dropdown">
+                        <div>
+                            <i class="fas fa-times" id="dropdown_close"></i>
+                        </div>
+                        <ul>
+                            <li><a id="createChannel"><i class="fas fa-plus-square"></i> Create a new channel</a></li>
+                            <li><a href="#"><i class="fas fa-user-alt"></i> Profile</a></li>
+                            <li><a href="#"><i class="fas fa-server"></i> Server settings</a></li>
+                            <li><a href="#"><i class="fas fa-question-circle"></i> Help</a></li>
+                            <li><a onclick="logout();"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+
+            </header>
+            <div class="channel-search">
+                <input type="search" placeholder="Search...." />
+                <i class="fas fa-search"></i>
+            </div>
+
+            <ul class="channels" id="channels">
+                <!-- <li>#General</li>
+                <li>#General</li>
+                <li>#General</li>
+                <li>#General</li>
+                <li>#General</li>
+                <li>#General</li>
+                <li>#General</li>
+                <li>#General</li> -->
+            </ul>
+            <div class="voice-channel">
+                <i class="fas fa-headphones"></i>
+                <a href="#">Voice channel</a>
+                <i class="fas fa-cog"></i>
+            </div>
+        </div>
+        <div class="middle-section">
+            <!-- create a new screen to display when there is no channel showing -->
+            <div class="chat-section">
+                <header>
+                    <i class="fas fa-arrow-left" id="show_channel_trigger"></i>
+                    <img src="images/default.png" alt="channel-profile" />
+                    <span>Channel: <strong id='name'></strong></span>
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-info-circle"></i>
+                    <i class="far fa-bell"></i>
+                    <i class="fas fa-cog"></i>
+                </header>
+                <div class="section-body" id="section-body">
+                    <!-- <div class="left-message">
+                        <div class="header">
+                            <img src="images/image-1.jpg" alt="user-profile" />
+                            <span>John Paul</span>
+                        </div>
+                        <p id="msg">you never know. Something could happen.</p>
+                    </div>
+                    <div class="right-message">
+                        <div class="header">
+                            <img src="images/image-1.jpg" alt="user-profile" />
+                            <span>John Paul</span>
+                        </div>
+                        <p id="msg">you never know. Something could happen.</p>
+                    </div> -->
+                </div>
+                <div class="input-section">
+                    <form id="msgForm">
+                        <i class="fas fa-laugh-beam"></i>
+                        <input type="text" placeholder="Type a message..." name="message" id="message" />
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/logout.js"></script>
+
+</body>
+
+</html>

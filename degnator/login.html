@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degnator - Login</title>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Lobster|Trirong|Rakkas|Yatra One|Syne Mono|Charmonman|Chonburi|Pattaya|Yellowtail|Great Vibes|Damion">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="./css/register.css" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
+    <script src="js/firebase.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="register">
+        <div class="left-section">
+            <header>Login to your Account</header>
+            <div class="form-section">
+                <legend> Login to see what your friends are posting.</legend>
+                <form action="" method="POST" id="login-form">
+                    <div class="input-section">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your Email..." required />
+                        <span id="email-error"></span>
+
+                    </div>
+                    <div class="input-section">
+                        <label for="password">password</label>
+                        <input type="password" name="password" id="password" placeholder="Enter your Password..." required />
+                        <span id="password-error"></span>
+
+                    </div>
+                    <span>Not a member? <a href="/register.html">Register</a></span>
+
+                    <div class="submit">
+                        <button>Login</button>
+                    </div>
+
+                </form>
+                <did class="login-with">
+                    <span class="google" onclick="signinWithGoogle();"><i class="fab fa-google-plus-g"></i> Log in with Google</span>
+                    <span class="facebook"><i class="fab fa-facebook"></i> Log in with Facebook</span>
+                    <span class="apple"><i class="fab fa-apple"></i> Log in with Your Apple Id</span>
+                </did>
+            </div>
+        </div>
+        <div class="right-section">
+            <img src="images/image-1.jpg" alt="register-image" />
+        </div>
+    </div>
+
+    <!-- <script>
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                alert("You are trying to access the Login page while you are logged in. Please logout first.");
+                location.href = "/frontend/index.html";
+            } else {
+                console.log("You've been signed out. Signin again.")
+            }
+        });
+    </script> -->
+    <!-- <script>
+        // logging users
+        const loginForm = document.querySelector('#login-form');
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = loginForm['email'].value;
+            const password = loginForm['password'].value;
+
+            auth.signInWithEmailAndPassword(email, password).then(credential => {
+                // console.log(credential.user.email);
+                loginForm.reset();
+                location.href = "/frontend/index.html"; //redirecting the user
+            }).catch(function(error) {
+                // Handle Errors here.
+                let errorCode = error.code;
+                let errorMessage = error.message;
+
+                if (errorCode == 'auth/user-not-found') {
+                    //  alert('This email is taken. Please choose another one!');
+                    document.getElementById("email-error").textContent = errorMessage;
+                    document.getElementById("email-error").style.display = "block";
+                    signupForm.reset();
+                } else if (errorCode == 'auth/wrong-password') {
+                    document.getElementById("password-error").textContent = "Wrong password. Please try again";
+                    document.getElementById("password-error").style.display = "block";
+                    signupForm.reset();
+                } else {
+                    alert(errorMessage);
+                }
+                console.log(error);
+            });
+        });
+    </script> -->
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
